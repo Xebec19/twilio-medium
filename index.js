@@ -13,7 +13,7 @@ const client = require("twilio")(accountSid, authToken);
 
 app.get("/send-sms", (req, res) => {
   client.messages
-    .create({ body: "Hi there", from: phoneNumber, to: "+917291003805" })
+    .create({ body: "Hi there", from: phoneNumber, to: "+919898989898" })
     .then((message) => {
       console.log(message.sid);
       res.json({ sid: message.sid }).end();
